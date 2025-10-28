@@ -51,7 +51,14 @@
         padding: 5rem 0;
       }
       .hero-gradient {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url("img/hero/hero.webp");
+        background-size: cover;
+        background-position: center;
       }
       .card-hover {
         transition: all 0.3s ease;
@@ -70,9 +77,9 @@
         <div class="flex justify-between items-center py-4">
           <div class="flex items-center space-x-2">
             <div
-              class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center"
+              class="w-10 h-10 rounded-full flex items-center justify-center"
             >
-              <span class="text-white font-bold text-lg">OU</span>
+              <img src="img/logo/UT.png" alt="Universitas Terbuka" />
             </div>
             <span class="text-xl font-bold text-primary-700"
               >Ormawa UT Sorong</span
@@ -94,11 +101,6 @@
               href="#divisions"
               class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
               >Divisi</a
-            >
-            <a
-              href="#activities"
-              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
-              >Kegiatan</a
             >
             <a
               href="#team"
@@ -123,7 +125,9 @@
     <section id="home" class="hero-gradient text-white section-padding pt-24">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6">Ormawa UT Sorong</h1>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <span class="text-secondary-500">Ormawa</span> UT Sorong
+          </h1>
           <p class="text-xl md:text-2xl mb-8 opacity-90">
             Bersatu Membangun, Berkarya untuk Kemajuan
           </p>
@@ -160,7 +164,20 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+          <div
+            class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mb-6"
+          >
+            <i class="fas fa-history text-primary-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Sejarah</h3>
+          <p class="text-gray-600">
+            Berdiri sejak 2018, Ormawa UT Sorong telah menjadi rumah bagi ribuan
+            mahasiswa untuk berkembang dan berkarya bersama.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
           <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
             <div
               class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mb-6"
@@ -169,8 +186,10 @@
             </div>
             <h3 class="text-xl font-semibold mb-4">Visi</h3>
             <p class="text-gray-600">
-              Menjadi organisasi mahasiswa terdepan yang mampu menciptakan
-              generasi unggul, kreatif, dan berkarakter untuk kemajuan bangsa.
+              Menjadi organisasi mahasiswa yang memiliki komitmen “Bersama
+              Membangun Mahasiswa Berdaya dan Berkarya” dengan kata lain menjadi
+              wadah pemberdayaan intelektual, moral dan professional bagi kampus
+              dan masyarakat.
             </p>
           </div>
 
@@ -181,23 +200,30 @@
               <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
             </div>
             <h3 class="text-xl font-semibold mb-4">Misi</h3>
-            <p class="text-gray-600">
-              Membangun sinergi antar mahasiswa, mengembangkan potensi melalui
-              berbagai kegiatan, dan berkontribusi aktif dalam masyarakat.
-            </p>
-          </div>
-
-          <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
-            <div
-              class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mb-6"
-            >
-              <i class="fas fa-history text-primary-600 text-2xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold mb-4">Sejarah</h3>
-            <p class="text-gray-600">
-              Berdiri sejak 2018, Ormawa UT Sorong telah menjadi rumah bagi
-              ribuan mahasiswa untuk berkembang dan berkarya bersama.
-            </p>
+            <ol>
+              <li>
+                Menghimpun dan mempersatukan mahasiswa dari berbagai latar
+                belakang untuk bersama-sama berkarya dan berkembang
+              </li>
+              <li>
+                Meningkatkan kompetensi dan kapasitas mahasiswa melalui
+                pelatihan, workshop, seminar, dan program pengembangan diri
+              </li>
+              <li>
+                Mendorong lahirnya inovasi dan kreativitas mahasiswa dalam
+                bidang akademik, seni, teknologi, dan budaya
+              </li>
+              <li>
+                Menjalin kerja sama dengan berbagai pihak, baik internal kampus
+                maupun eksternal seperti pemerintah daerah, komunitas, dan dunia
+                usaha.
+              </li>
+              <li>Berperan aktif dalam menjawab isu-isu lokal dan global</li>
+              <li>
+                Menjaga nilai-nilai kebangsaan, kearifan lokal, dan etika
+                kemahasiswaan
+              </li>
+            </ol>
           </div>
         </div>
       </div>
@@ -306,81 +332,6 @@
       </div>
     </section>
 
-    <!-- Activities Section -->
-    <section id="activities" class="bg-gray-50 section-padding">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Kegiatan Terbaru
-          </h2>
-          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-            Berbagai kegiatan yang telah kami selenggarakan untuk pengembangan
-            anggota
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-            <img
-              src="https://picsum.photos/400/250?random=1"
-              alt="Workshop Teknologi 2024"
-              class="w-full h-48 object-cover"
-              loading="lazy"
-            />
-            <div class="p-6">
-              <span class="text-sm text-primary-600 font-medium"
-                >15 Maret 2024</span
-              >
-              <h3 class="text-lg font-semibold mb-2 mt-1">
-                Workshop Teknologi
-              </h3>
-              <p class="text-gray-600 text-sm">
-                Pelatihan pengembangan web dan mobile app untuk anggota
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-            <img
-              src="https://picsum.photos/400/250?random=2"
-              alt="Seminar Kewirausahaan"
-              class="w-full h-48 object-cover"
-              loading="lazy"
-            />
-            <div class="p-6">
-              <span class="text-sm text-primary-600 font-medium"
-                >28 Februari 2024</span
-              >
-              <h3 class="text-lg font-semibold mb-2 mt-1">
-                Seminar Kewirausahaan
-              </h3>
-              <p class="text-gray-600 text-sm">
-                Membangun mindset entrepreneur di kalangan mahasiswa
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
-            <img
-              src="https://picsum.photos/400/250?random=3"
-              alt="Bakti Sosial"
-              class="w-full h-48 object-cover"
-              loading="lazy"
-            />
-            <div class="p-6">
-              <span class="text-sm text-primary-600 font-medium"
-                >10 Februari 2024</span
-              >
-              <h3 class="text-lg font-semibold mb-2 mt-1">Bakti Sosial</h3>
-              <p class="text-gray-600 text-sm">
-                Kegiatan sosial membantu masyarakat sekitar kampus
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Team Section -->
     <section id="team" class="section-padding">
       <div class="container mx-auto px-4">
@@ -396,12 +347,12 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center">
             <img
-              src="https://picsum.photos/200?random=4"
+              src="img/tim/anggry.jpeg"
               alt="Ketua Ormawa"
               class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               loading="lazy"
             />
-            <h3 class="font-semibold text-lg">Ahmad Rizki</h3>
+            <h3 class="font-semibold text-lg">Anggry Ramadani</h3>
             <p class="text-primary-600 font-medium">Ketua</p>
             <p class="text-gray-600 text-sm mt-2">
               Memimpin organisasi dengan visi yang jelas
