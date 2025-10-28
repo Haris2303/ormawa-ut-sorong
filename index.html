@@ -815,7 +815,7 @@
         content.classList.toggle("max-h-[350px]");
         content.classList.toggle("max-h-full");
 
-        if (button.textContent === "Baca Selengkapnya") {
+        if (content.classList.contains("max-h-full")) {
           button.textContent = "Tutup";
         } else {
           button.textContent = "Baca Selengkapnya";
