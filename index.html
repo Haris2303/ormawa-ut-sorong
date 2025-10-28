@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <base target="_self" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ormawa UT Sorong - Organisasi Mahasiswa</title>
+    <meta
+      name="description"
+      content="Website resmi Ormawa UT Sorong - Organisasi Mahasiswa Universitas Terbuka Sorong"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+              },
+              secondary: {
+                50: "#fefce8",
+                500: "#eab308",
+                600: "#ca8a04",
+                700: "#a16207",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .section-padding {
+        padding: 5rem 0;
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-lg">OU</span>
+            </div>
+            <span class="text-xl font-bold text-primary-700"
+              >Ormawa UT Sorong</span
+            >
+          </div>
+
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+              >Beranda</a
+            >
+            <a
+              href="#about"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+              >Tentang</a
+            >
+            <a
+              href="#divisions"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+              >Divisi</a
+            >
+            <a
+              href="#activities"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+              >Kegiatan</a
+            >
+            <a
+              href="#team"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+              >Tim</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
+              >Kontak</a
+            >
+          </div>
+
+          <button class="md:hidden text-gray-600">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white section-padding pt-24">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">Ormawa UT Sorong</h1>
+          <p class="text-xl md:text-2xl mb-8 opacity-90">
+            Bersatu Membangun, Berkarya untuk Kemajuan
+          </p>
+          <p class="text-lg mb-10 opacity-80">
+            Organisasi Mahasiswa Universitas Terbuka Sorong yang berkomitmen
+            menciptakan lingkungan belajar yang inspiratif dan kolaboratif
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              class="bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-8 rounded-full transition-colors"
+            >
+              Bergabung dengan Kami
+            </button>
+            <button
+              class="border-2 border-white hover:bg-white hover:text-primary-600 text-white font-semibold py-3 px-8 rounded-full transition-colors"
+            >
+              Lihat Kegiatan
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-50 section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Tentang Ormawa UT Sorong
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Organisasi yang menjadi wadah pengembangan diri dan kontribusi nyata
+            bagi masyarakat
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+            <div
+              class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-eye text-primary-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Visi</h3>
+            <p class="text-gray-600">
+              Menjadi organisasi mahasiswa terdepan yang mampu menciptakan
+              generasi unggul, kreatif, dan berkarakter untuk kemajuan bangsa.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+            <div
+              class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Misi</h3>
+            <p class="text-gray-600">
+              Membangun sinergi antar mahasiswa, mengembangkan potensi melalui
+              berbagai kegiatan, dan berkontribusi aktif dalam masyarakat.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-sm card-hover">
+            <div
+              class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-history text-primary-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Sejarah</h3>
+            <p class="text-gray-600">
+              Berdiri sejak 2018, Ormawa UT Sorong telah menjadi rumah bagi
+              ribuan mahasiswa untuk berkembang dan berkarya bersama.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisions Section -->
+    <section id="divisions" class="section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Divisi Kami
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Berbagai divisi yang bekerja sama menciptakan program-program
+            berkualitas
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="w-12 h-12 bg-secondary-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-laptop-code text-secondary-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Divisi Protik</h3>
+            <p class="text-gray-600 text-sm">
+              Mengelola teknologi informasi dan pengembangan sistem organisasi
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="w-12 h-12 bg-secondary-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-bullhorn text-secondary-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Divisi Media</h3>
+            <p class="text-gray-600 text-sm">
+              Mengelola konten media sosial dan dokumentasi kegiatan
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="w-12 h-12 bg-secondary-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-handshake text-secondary-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Divisi Humas</h3>
+            <p class="text-gray-600 text-sm">
+              Membangun relasi dengan pihak eksternal dan internal
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="w-12 h-12 bg-secondary-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-users text-secondary-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Divisi Kaderisasi</h3>
+            <p class="text-gray-600 text-sm">
+              Mengembangkan potensi anggota melalui program kaderisasi
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="w-12 h-12 bg-secondary-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-chart-line text-secondary-600 text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Divisi Pengembangan</h3>
+            <p class="text-gray-600 text-sm">
+              Merancang program pengembangan organisasi dan anggota
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+          >
+            <div
+              class="w-12 h-12 bg-secondary-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i
+                class="fas fa-hand-holding-heart text-secondary-600 text-xl"
+              ></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Divisi Sosial</h3>
+            <p class="text-gray-600 text-sm">
+              Mengelola kegiatan sosial dan pengabdian masyarakat
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="bg-gray-50 section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Kegiatan Terbaru
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Berbagai kegiatan yang telah kami selenggarakan untuk pengembangan
+            anggota
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+            <img
+              src="https://picsum.photos/400/250?random=1"
+              alt="Workshop Teknologi 2024"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <span class="text-sm text-primary-600 font-medium"
+                >15 Maret 2024</span
+              >
+              <h3 class="text-lg font-semibold mb-2 mt-1">
+                Workshop Teknologi
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Pelatihan pengembangan web dan mobile app untuk anggota
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+            <img
+              src="https://picsum.photos/400/250?random=2"
+              alt="Seminar Kewirausahaan"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <span class="text-sm text-primary-600 font-medium"
+                >28 Februari 2024</span
+              >
+              <h3 class="text-lg font-semibold mb-2 mt-1">
+                Seminar Kewirausahaan
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Membangun mindset entrepreneur di kalangan mahasiswa
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+            <img
+              src="https://picsum.photos/400/250?random=3"
+              alt="Bakti Sosial"
+              class="w-full h-48 object-cover"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <span class="text-sm text-primary-600 font-medium"
+                >10 Februari 2024</span
+              >
+              <h3 class="text-lg font-semibold mb-2 mt-1">Bakti Sosial</h3>
+              <p class="text-gray-600 text-sm">
+                Kegiatan sosial membantu masyarakat sekitar kampus
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Tim Pengurus
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Individu-individu berdedikasi yang memimpin Ormawa UT Sorong
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <img
+              src="https://picsum.photos/200?random=4"
+              alt="Ketua Ormawa"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            />
+            <h3 class="font-semibold text-lg">Ahmad Rizki</h3>
+            <p class="text-primary-600 font-medium">Ketua</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Memimpin organisasi dengan visi yang jelas
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="https://picsum.photos/200?random=5"
+              alt="Wakil Ketua"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            />
+            <h3 class="font-semibold text-lg">Siti Nurhaliza</h3>
+            <p class="text-primary-600 font-medium">Wakil Ketua</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Mendukung kepemimpinan dan koordinasi
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="https://picsum.photos/200?random=6"
+              alt="Sekretaris"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            />
+            <h3 class="font-semibold text-lg">Budi Santoso</h3>
+            <p class="text-primary-600 font-medium">Sekretaris</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Mengelola administrasi dan dokumentasi
+            </p>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="https://picsum.photos/200?random=7"
+              alt="Bendahara"
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+              loading="lazy"
+            />
+            <h3 class="font-semibold text-lg">Maya Sari</h3>
+            <p class="text-primary-600 font-medium">Bendahara</p>
+            <p class="text-gray-600 text-sm mt-2">
+              Mengelola keuangan organisasi
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-50 section-padding">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Hubungi Kami
+            </h2>
+            <p class="text-lg text-gray-600">
+              Mari berkolaborasi dan berkarya bersama
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-semibold mb-6">Kirim Pesan</h3>
+              <form class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Pesan</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  ></textarea>
+                </div>
+                <button
+                  type="button"
+                  class="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Kirim Pesan
+                </button>
+              </form>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-6">Informasi Kontak</h3>
+              <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="fas fa-map-marker-alt text-primary-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Alamat</h4>
+                    <p class="text-gray-600">
+                      Jl. Pendidikan No. 123, Sorong, Papua Barat
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="fas fa-envelope text-primary-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Email</h4>
+                    <p class="text-gray-600">ormawa.ut.sorong@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i class="fas fa-phone text-primary-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium">Telepon</h4>
+                    <p class="text-gray-600">+62 812-3456-7890</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="font-medium mb-4">Media Sosial</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-primary-500 hover:bg-primary-600 rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-primary-500 hover:bg-primary-600 rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-primary-500 hover:bg-primary-600 rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 bg-primary-500 hover:bg-primary-600 rounded-full flex items-center justify-center text-white transition-colors"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-4">
+              <div
+                class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center"
+              >
+                <span class="text-white font-bold text-lg">OU</span>
+              </div>
+              <span class="text-xl font-bold">Ormawa UT Sorong</span>
+            </div>
+            <p class="text-gray-400 mb-4 max-w-md">
+              Organisasi Mahasiswa Universitas Terbuka Sorong yang berkomitmen
+              menciptakan lingkungan belajar yang inspiratif dan kolaboratif.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Tautan Cepat</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Tentang</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#divisions"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Divisi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#activities"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Kegiatan</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold mb-4">Informasi</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#team"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Tim</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Kontak</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Bergabung</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2024 Ormawa UT Sorong. Semua hak dilindungi.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Mobile menu toggle (placeholder functionality)
+      document
+        .querySelector("button.md\\:hidden")
+        .addEventListener("click", function () {
+          alert("Menu mobile akan ditampilkan di sini");
+        });
+
+      // Form submission handler
+      document
+        .querySelector("form button")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("Terima kasih! Pesan Anda telah dikirim. (Ini adalah demo)");
+          document.querySelector("form").reset();
+        });
+
+      // Add scroll animation for sections
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections for scroll animations
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
