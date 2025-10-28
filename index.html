@@ -524,7 +524,7 @@
           <div class="grid md:grid-cols-2 gap-12">
             <div>
               <h3 class="text-xl font-semibold mb-6">Kirim Pesan</h3>
-              <form class="space-y-4">
+              <form id="waForm" class="space-y-4">
                 <div>
                   <label class="block text-sm font-medium text-gray-700 mb-2"
                     >Nama Lengkap</label
@@ -554,6 +554,7 @@
                 </div>
                 <button
                   type="button"
+                  id="sendWA"
                   class="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Kirim Pesan
@@ -820,6 +821,25 @@
         } else {
           button.textContent = "Baca Selengkapnya";
         }
+      });
+
+      document.getElementById("sendWA").addEventListener("click", function () {
+        const nama = document.getElementById("nama").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const pesan = document.getElementById("pesan").value.trim();
+
+        if (!nama || !email || !pesan) {
+          alert("Harap isi semua bidang sebelum mengirim pesan!");
+          return;
+        }
+
+        // Ganti nomor berikut dengan nomor WhatsApp kamu (gunakan kode negara tanpa +)
+        const nomorWA = "6285796081337";
+
+        const text = `Halo, saya *${nama}* (%20${email}%20).%0A%0A${pesan}`;
+        const url = `https://wa.me/${nomorWA}?text=${text}`;
+
+        window.open(url, "_blank");
       });
     </script>
   </body>
