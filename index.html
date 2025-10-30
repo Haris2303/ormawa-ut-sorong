@@ -75,6 +75,7 @@
     <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
           <div class="flex items-center space-x-2">
             <div
               class="w-10 h-10 rounded-full flex items-center justify-center"
@@ -90,7 +91,8 @@
             >
           </div>
 
-          <div class="hidden md:flex space-x-8">
+          <!-- Desktop Menu -->
+          <div id="nav-menu" class="hidden md:flex space-x-8">
             <a
               href="#home"
               class="text-gray-600 hover:text-primary-600 font-medium transition-colors"
@@ -118,9 +120,39 @@
             >
           </div>
 
-          <button class="md:hidden text-gray-600">
+          <!-- Mobile Button -->
+          <button id="menu-btn" class="md:hidden text-gray-600">
             <i class="fas fa-bars text-xl"></i>
           </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden flex-col space-y-4 pb-4 md:hidden">
+          <a
+            href="#home"
+            class="block text-gray-700 hover:text-primary-600 font-medium"
+            >Beranda</a
+          >
+          <a
+            href="#about"
+            class="block text-gray-700 hover:text-primary-600 font-medium"
+            >Tentang</a
+          >
+          <a
+            href="#divisions"
+            class="block text-gray-700 hover:text-primary-600 font-medium"
+            >Divisi</a
+          >
+          <a
+            href="#team"
+            class="block text-gray-700 hover:text-primary-600 font-medium"
+            >Tim</a
+          >
+          <a
+            href="#contact"
+            class="block text-gray-700 hover:text-primary-600 font-medium"
+            >Kontak</a
+          >
         </div>
       </div>
     </nav>
@@ -376,13 +408,9 @@
               Divisi Minat, Bakat, Keterampilan & Kewirausahaan
             </h3>
             <p class="text-gray-600 text-sm">
-              Bidang minat, bakat, keterampilan, dan kewirausahaan
-              berkonsentrasi pada pengembangan diri mahasiswa agar merasa senang
-              terhadap segala sesuatu yang diminatinya. Untuk itu, pembinaan
-              minat, bakat, dan keterampilan merupakan suatu upaya membangun
-              kondisi dan situasi yang kondusif agar mahasiswa dapat
-              mengembangan potensi dirinya, serta memperoleh dorongan atau
-              motivasi dari lingkungan belajarnya.
+              Bidang minat, bakat, keterampilan, dan kewirausahaan mengembangkan
+              potensi diri mahasiswa melalui pembinaan dan lingkungan belajar
+              yang kondusif.
             </p>
           </div>
 
@@ -445,7 +473,7 @@
               />
             </div>
             <h3 class="font-semibold text-lg">Anggry Ramadani</h3>
-            <p class="text-primary-600 font-medium">Ketua Devisi</p>
+            <p class="text-primary-600 font-medium">Ketua Divisi</p>
             <p class="text-gray-600 text-sm mt-2">
               Bidang Minat, Bakat, dan Kewirausahaan
             </p>
@@ -760,12 +788,15 @@
         });
       });
 
-      // Mobile menu toggle (placeholder functionality)
-      document
-        .querySelector("button.md\\:hidden")
-        .addEventListener("click", function () {
-          alert("Menu mobile akan ditampilkan di sini");
-        });
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuBtn.innerHTML = mobileMenu.classList.contains("hidden")
+          ? '<i class="fas fa-bars text-xl"></i>'
+          : '<i class="fas fa-times text-xl"></i>';
+      });
 
       document
         .querySelector("form button")
